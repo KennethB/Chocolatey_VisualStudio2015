@@ -24,22 +24,13 @@ The Visual C++ Build Tools 2015 Technical Preview ships with the same C++ compil
 You can customize the installation either by adding optional available features or by specifying own installation configuration file.
 
 #### Adding optional features
-Optional features (Sql tools, phone tools, etc.) are available but not installed by default.
+Optional features (Phone tools, etc.) are available but not installed by default.
 You can provide optional parameters to include them during the install.
-Here is example that includes the Sql Tools and Windows Phone Emulators:
+Here is example that includes the Android and iOS build tools:
 
-    choco install VisualCppBuildTools -packageParameters "--Features SQL,WindowsPhone81Emulators"
+    choco install VisualCppBuildTools -packageParameters "--Features L_MDDCPlusPlus_iOS_V4,L_MDDCPlusPlus_Android_V4"
 
-##### Available features:
-- LightSwitch
-- MDDCPlusPlus
-- MDDJS
-- OfficeDeveloperTools
-- SilverLight_Developer_Kit
-- SQL
-- ToolsForWin81_WP80_WP81
-- VC_MFC_Libraries
-- WindowsPhone81Emulators
+##### Available features: see AdminDeployment.xml
 
 #### Using own configuration file
 Specifying the optional features above modifies the configuration file used during installation (AdminDeployment.xml). If that is not enough you can provide this file on your own.
@@ -47,7 +38,7 @@ Example:
 
     choco install VisualCppBuildTools -packageParameters "--AdminFile c:\path to your\AdminDeployment.xml"
     choco install VisualCppBuildTools -packageParameters "--AdminFile http://path/to/your/AdminDeployment.xml"</description>
-    <summary></summary>
+    <summary>Build tools (compiler, SDKs, no IDE) from VS 2015</summary>
     <tags>Microsoft Visual C++ Build Tools 2015 Technical Preview admin</tags>
     <releaseNotes>- Created build tools package</releaseNotes>
   </metadata>
